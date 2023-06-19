@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Time</title>
+</head>
+<body>
+    <div class="boundary">
+        <div class="time-zone-container">
+            <div class="item" id="time-zone" style="width: 85%; font-size: 25px; color: gray;">
+                Time Zone: <span id="current-timezone"></span>
+            </div>
+            <button id="modal-btn" class="button" style="margin: 1rem;">Select Timezone</button>
+        </div>
+
+        <div class="item" id="current-time" style="width: 45%; font-size: 50px; font-weight: bold;"></div>
+        <div class="item" id="current-date" style="width: 22%; font-size: 25px;"></div>
+    </div>
+    <div id="my-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Change Time Zone</h2>
+            </div>
+            <div class="modal-body">
+                <label for="timezone-select">Timezone:</label>
+                <select id="timezone-select">
+                    <option value="Africa/Kampala">Kampala</option>
+                    <option value="America/New_York">New York</option>
+                    <option value="America/Los_Angeles">Los Angeles</option>
+                    <option value="Europe/London">London</option>
+                    <!-- Add more timezone options as needed -->
+                </select>
+                <button class="button" id="saveBtn">Save</button>
+            </div>
+        </div>
+    </div>
+    <script src="bundle.js"></script>
+</body>
+</html>
